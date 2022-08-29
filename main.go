@@ -3,20 +3,14 @@ package main
 import "fmt"
 
 func main() {
-	var arr1 [3]int
-	// [3]int 全てが型
-	fmt.Println(arr1)
-	fmt.Printf("%T\n", arr1)
+	var x interface{}
+	fmt.Println(x)
+	x = 1
+	fmt.Println(x)
 
-	var arr2 [3]string = [3]string{"A", "B"}
-	fmt.Println(arr2)
-	// 入力されていなければから文字が代入される
+	// interface型は全ての方を汎用的に表す
+	// 初期値はnil
 
-	arr3 := [3]int{1, 2, 3}
-	fmt.Println(arr3)
-
-	arr4 := [...]string{"C", "D"}
-	fmt.Println(arr4)
-
-	fmt.Println(arr1[0])
+	x = [3]int{1, 2, 3}
+	fmt.Println(x)
 }
