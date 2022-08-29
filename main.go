@@ -3,15 +3,14 @@ package main
 import "fmt"
 
 func main() {
-	f := func(x, y int) int {
-		return x + y
+	a := 0
+	if a == 2 {
+		fmt.Println("two")
+	} else {
+		fmt.Println("I dont know")
 	}
-	i := f(1, 2)
-	fmt.Println(i)
 
-	i2 := func(x, y int) int {
-		return x + y
-	}(1, 2)
-
-	fmt.Println(i2)
+	if b := 100; b == 100 {
+		fmt.Println("one hundred")
+	}
 }
