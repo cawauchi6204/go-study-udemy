@@ -2,14 +2,28 @@ package main
 
 import "fmt"
 
-const Pi = 3.14
+func Plus(x int, y int) int {
+	return x + y
+}
 
-const (
-	URL      = "http://xxx.co.jp"
-	SiteName = "test"
-)
+func Div(x, y int) (int, int) {
+	q := x / y
+	r := x % y
+	return q, r
+}
+
+func Double(price int) (result int) {
+	result = price * 2
+	return
+}
 
 func main() {
-	fmt.Println(URL)
-	fmt.Println(SiteName)
+	i := Plus(1, 2)
+	fmt.Println(i)
+
+	i2, _ := Div(9, 4)
+	fmt.Println(i2)
+
+	i4 := Double(1000)
+	fmt.Println(i4)
 }
